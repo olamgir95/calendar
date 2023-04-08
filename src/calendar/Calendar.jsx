@@ -3,20 +3,23 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
-import resourceTimeGridPlugin from "@fullcalendar/resource-timegrid";
 import moment from "moment/moment";
 
-
 const Calendar = () => {
+  const DayHeaderContent = (args) => {
+    return (
+      <div>
+        <span >{moment(args.date).format("D")}</span>
+        <span style={{ display: "block", marginTop: "5px" }}>
+          {moment(args.date).format("dd")}
+        </span>
+      </div>
+    );
+  };
   return (
     <div style={{ padding: "50px" }}>
       <FullCalendar
-        plugins={[
-          dayGridPlugin,
-          timeGridPlugin,
-          interactionPlugin,
-         
-        ]}
+        plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         initialView={"timeGridWeek"}
         headerToolbar={{
           start: "today,prev,next",
@@ -38,23 +41,23 @@ const Calendar = () => {
           ],
         }}
         dayCellDidMount={(cell) => {
-          // console.log('td',cell);
+          console.log("td", cell);
           if (cell.isPast) cell.el.style.backgroundColor = "#F8F9FD";
-          cell.el.style.border = 0
-          if (!cell.isPast) cell.el.style.border = "1px solid grey";
+          cell.el.style.border = 0;
+          if (!cell.isPast) {
+            cell.el.style.border = "1px solid grey";
+            console.log("cell", cell.el.localName);
+          }
         }}
         slotLabelFormat={[
           {
             hour: "numeric",
             meridiem: "lowercase",
-        
-          },{day:'numeric'}
+          },
+          { day: "numeric" },
         ]}
-        dayHeaderContent={ (args) => {
-          console.log('args',args);
-          return moment(args.date).format("D ddd")
-      }}
-       
+        dayHeaderContent={(args) => DayHeaderContent(args)}
+       firstDay={1}
       />
     </div>
   );

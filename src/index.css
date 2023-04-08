@@ -11,21 +11,55 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.fc-theme-standard td{
-  border:none
+
+.fc-theme-standard td {
+  border: none
 }
+
 .fc .fc-timegrid-slot-minor {
- border-top-style:none ;
+  border-top-style: none;
 }
-.fc-scroller-harness{
-  overflow-x: none;
-  overflow-y: none !important;
+
+.fc-scrollgrid-sync-inner {
   border: none;
+}
+
+.fc-scrollgrid-sync-table {
+  display: none;
+}
+
+
+.fc-day-today {
+  background: #FFF !important;
+  border: none !important;
 
 }
-.fc-scrollgrid-sync-inner{
-  border: none;
+
+colgroup {
+  background-color: #F8F9FD;
 }
-.fc-scrollgrid-sync-table{
-  display: none;
+
+tbody {
+  border: none !important;
+}
+
+.fc .fc-cell-shaded {
+  display: none !important;
+}
+
+/* .fc-day{
+  background-color: yellow;
+} */
+.fc-col-header-cell-cushion span:nth-child(1) {
+  color: blue;
+  width: 50px;
+  height: 50px;
+}
+
+.fc-day-today .fc-col-header-cell-cushion span:nth-child(1) {
+  width: 100%;
+  height: 50px;
+  border-radius: 50%;
+  background-color: blue;
+  color: white;
 }
