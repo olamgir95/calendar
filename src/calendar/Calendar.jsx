@@ -50,10 +50,6 @@ const Calendar = () => {
         
           },{day:'numeric'}
         ]}
-        views={{
-          
-        }}
-        
         dayHeaderContent={ (args) => {
           console.log('args',args);
           return moment(args.date).format("D ddd")
