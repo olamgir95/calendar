@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.fc-theme-standard td{
+  border:none
+}
+.fc .fc-timegrid-slot-minor {
+ border-top-style:none ;
+}
+.fc-scroller-harness{
+  overflow-x: none;
+  overflow-y: none !important;
+  border: none;
+
+}
+.fc-scrollgrid-sync-inner{
+  border: none;
+}
+.fc-scrollgrid-sync-table{
+  display: none;
+}
