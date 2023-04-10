@@ -10,12 +10,10 @@
   border: none;
 }
 
-.fc-scrollgrid-sync-table {
-  display: none;
-}
-.fc-scroller {
+
+/* .fc-scroller {
   overflow: hidden;
-}
+} */
 
 colgroup {
   background-color: #fafafa;
@@ -70,9 +68,7 @@ tbody {
 .fc-theme-standard .fc-scrollgrid {
   border: 0;
 }
-.fc-scroller {
-  
-}
+
 /* .fc-button-group{
 position: relative;
   z-index: 1;
