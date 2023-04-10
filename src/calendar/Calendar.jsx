@@ -57,6 +57,7 @@ const Calendar = () => {
         slotLabelFormat={SlotLabelFormat}
         dayHeaderContent={(args) => DayHeaderContent(args)}
         firstDay={1}
+        allDaySlot={false}
       />
   );
 };
